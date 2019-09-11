@@ -2,8 +2,25 @@
   background-image: url("../images/paperbackground2.jpg");
 }
 
+body {
+  background-color: #d7dfc8;
+}
+
 h1, h2 {
     color: black;
+}
+
+.card-header {
+background-color: rgba(0,0,0,.07);
+}
+
+.articlecard {
+  margin: 4px;
+  background-color: #d7dfc8;
+}
+
+.btn-primary {
+  background-color: #8e9978;
 }
 
 @media (min-width: 1px) {
