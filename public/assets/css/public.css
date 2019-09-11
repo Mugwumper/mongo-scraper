@@ -1,0 +1,30 @@
+.background-image {
+  background-image: url("../images/paperbackground.jpg");
+}
+
+h1, h2 {
+    color: black;
+}
+
+@media (min-width: 1px) {
+  .display-1 {
+    font-size: 4rem;
+    color: black;
+  }
+}
+
+@media (min-width: 576px) {
+  .display-1 {
+    font-size: 5rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-1 {
+    font-size: 6rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
