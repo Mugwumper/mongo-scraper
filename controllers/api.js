@@ -4,13 +4,19 @@ const request = require("request");
 const cheerio = require("cheerio");
 const router = express.Router();
 
+// Routes
+
+// A GET route for scraping the nyt website
 router.get("/scrape", function(req, res) {
+  // First, we grab the body of the html with request
   request("https://www.nytimes.com/", function(error, response, html) {
-    var $ = cheerio.load(html);
+    // Then, we load that into cheerio and save it to $ for a shorthand selector
+      var $ = cheerio.load(html);
     $("article").each(function(i, element) {
 
-      var result = {};
+      var result = {}; // initialize result each time as {}
 
+      // pick apart the html to get title, summary and link field values
       summary = ""
       if ($(this).find("ul").length) {
         summary = $(this).find("li").first().text();
@@ -22,8 +28,8 @@ router.get("/scrape", function(req, res) {
       result.summary = summary;
       result.link = "https://www.nytimes.com" + $(this).find("a").attr("href");
 
+      // save article to database
       var entry = new db.Article(result);
-
       entry.save(function(err, doc) {
         if (err) {
           console.log(err);
@@ -34,7 +40,8 @@ router.get("/scrape", function(req, res) {
       });
 
     });
-       res.redirect('/')
+      // once complete refresh the main page
+      res.redirect('/')
   });
 });
 
@@ -112,7 +119,7 @@ router.post("/note/:id", function(req, res) {
       return db.Article.findOneAndUpdate(
         { _id: req.params.id },
         { $push: { note: dbNote._id } },
-        { new: true }
+        { new: true } // needed: Otherwise we return the original which is confusing 
       );
     })
     .then(function(dbArticle) {

@@ -4,14 +4,22 @@
 
 body {
   background-color: #d7dfc8;
+  font-family: "News+Cycle";
 }
 
-h1, h2 {
-    color: black;
+h1,
+h2 {
+  color: black;
 }
 
+h2 {
+  font-family: "Old+Times+American+Regular";
+}
+.card {
+  background-color: rgba(0, 0, 0, 0.09);
+}
 .card-header {
-background-color: rgba(0,0,0,.07);
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 .articlecard {
@@ -26,14 +34,12 @@ background-color: rgba(0,0,0,.07);
 @media (min-width: 1px) {
   .display-1 {
     font-size: 4rem;
-    color: black;
   }
 }
 
 @media (min-width: 576px) {
   .display-1 {
     font-size: 5rem;
-    color: black;
     font-family: "Times New Roman", Times, serif;
   }
 }
@@ -41,7 +47,6 @@ background-color: rgba(0,0,0,.07);
 @media (min-width: 768px) {
   .display-1 {
     font-size: 6rem;
-    color: black;
     font-family: "Times New Roman", Times, serif;
   }
 }
