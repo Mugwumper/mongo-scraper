@@ -25,8 +25,7 @@ $(document).ready(function () {
                 data[0].note.forEach(v => {
                     $('.articles-available').append($(`<li class='list-group-item'>${v.text}<button type='button' class='btn btn-danger btn-sm float-right btn-deletenote' data='${v._id}'>X</button></li>`));
                 })
-            }
-            else {
+            } else {
                 $('.articles-available').append($(`<li class='list-group-item'>No notes for this article yet</li>`));
                 console.log("Second ran!")
             }
@@ -69,10 +68,10 @@ $(document).ready(function () {
         }).then(function() {
             const alert = `
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            Your note has been saved!
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                note saved
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>`
             button.parent().append(alert);
             }
