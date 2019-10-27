@@ -8,13 +8,6 @@ Scrape the New York Times homepage, then save and add notes to your favorite art
 
 For a live example, see a deployed version to Heroku at [https://thawing-waters-71746.herokuapp.com/](https://thawing-waters-71746.herokuapp.com/ "deployed example")
 
-
-
-
-Without realising it I created a favicon that is the same as the offical one used by the  NYT's. Mine is sloppy by comparison but as a 16x16 image it's almost impossible to tell them apart.
-
-Fonts: https://fonts.google.com/specimen/News+Cycle
-
 ## Technologies Used
 - Node.js
 - MongoDB/Mongoose
@@ -22,3 +15,8 @@ Fonts: https://fonts.google.com/specimen/News+Cycle
 - request
 - express
 - Handlebars
+
+## Misc Notes
+Without realising it I created a favicon that is the same as the offical one used by the  NYT's. Mine is sloppy by comparison but as a 16x16 image it's almost impossible to tell them apart.
+
+Fonts: https://fonts.google.com/specimen/News+Cycle
